@@ -12,7 +12,7 @@ A modern, responsive, and performance-optimized portfolio website built for **Li
 
 ## 🌟 Live Demo
 
-- **Live URL**: [https://ais-pre-xmo46tu3i3ar5mmivcnqbp-468445919357.asia-east1.run.app](https://ais-pre-xmo46tu3i3ar5mmivcnqbp-468445919357.asia-east1.run.app)
+- **Live URL**: [https://ais-dev-xmo46tu3i3ar5mmivcnqbp-468445919357.asia-east1.run.app](https://ais-dev-xmo46tu3i3ar5mmivcnqbp-468445919357.asia-east1.run.app)
 - **LinkedIn**: [linkedin.com/in/likhitha-tummala-366440282](https://www.linkedin.com/in/likhitha-tummala-366440282/)
 - **GitHub**: [github.com/likhitha7906](https://github.com/likhitha7906)
 
