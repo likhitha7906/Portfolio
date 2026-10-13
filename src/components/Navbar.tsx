@@ -9,16 +9,14 @@ import {
   FileText, 
   Github, 
   Linkedin, 
-  Sparkles,
   ExternalLink
 } from 'lucide-react';
 
 interface Props {
   onOpenResume: () => void;
-  onOpenEditGuide: () => void;
 }
 
-export const Navbar: React.FC<Props> = ({ onOpenResume, onOpenEditGuide }) => {
+export const Navbar: React.FC<Props> = ({ onOpenResume }) => {
   const { theme, toggleTheme } = useTheme();
   const [activeSection, setActiveSection] = useState<string>('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -119,16 +117,6 @@ export const Navbar: React.FC<Props> = ({ onOpenResume, onOpenEditGuide }) => {
 
           {/* Right Header Actions */}
           <div className="hidden sm:flex items-center gap-2.5">
-            {/* Quick edit guide info pill */}
-            <button
-              onClick={onOpenEditGuide}
-              className="text-xs text-slate-400 hover:text-slate-200 border border-slate-800 hover:border-slate-700 bg-slate-900/60 px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 transition-colors"
-              title="Customization and config instructions for Likhitha"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-              <span>Config Guide</span>
-            </button>
-
             {/* Dark / Light Toggle */}
             <button
               onClick={toggleTheme}
@@ -210,17 +198,6 @@ export const Navbar: React.FC<Props> = ({ onOpenResume, onOpenEditGuide }) => {
             >
               <FileText className="w-4 h-4" />
               <span>View / Download Resume</span>
-            </button>
-
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenEditGuide();
-              }}
-              className="w-full py-2 px-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-mono flex items-center justify-center gap-1.5"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-              <span>Portfolio Config Guide</span>
             </button>
 
             <div className="flex items-center justify-center gap-4 pt-2">

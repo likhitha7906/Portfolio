@@ -15,11 +15,9 @@ import { ResumeSection } from './components/ResumeSection';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ResumeModal } from './components/ResumeModal';
-import { EditGuideModal } from './components/EditGuideModal';
 
 export default function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
-  const [isEditGuideOpen, setIsEditGuideOpen] = useState(false);
 
   return (
     <ThemeProvider>
@@ -28,7 +26,6 @@ export default function App() {
         {/* Navigation Bar */}
         <Navbar 
           onOpenResume={() => setIsResumeModalOpen(true)}
-          onOpenEditGuide={() => setIsEditGuideOpen(true)}
         />
 
         {/* Main Sections */}
@@ -56,18 +53,12 @@ export default function App() {
         </main>
 
         {/* Footer */}
-        <Footer onOpenEditGuide={() => setIsEditGuideOpen(true)} />
+        <Footer />
 
         {/* Interactive ATS Resume Modal */}
         <ResumeModal 
           isOpen={isResumeModalOpen} 
           onClose={() => setIsResumeModalOpen(false)} 
-        />
-
-        {/* Portfolio Customization Guide Modal */}
-        <EditGuideModal 
-          isOpen={isEditGuideOpen} 
-          onClose={() => setIsEditGuideOpen(false)} 
         />
 
       </div>

@@ -1,12 +1,8 @@
 import React from 'react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
-import { Github, Linkedin, Mail, ArrowUp, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 
-interface Props {
-  onOpenEditGuide: () => void;
-}
-
-export const Footer: React.FC<Props> = ({ onOpenEditGuide }) => {
+export const Footer: React.FC = () => {
   const { personal } = PORTFOLIO_DATA;
   const currentYear = new Date().getFullYear();
 
@@ -81,15 +77,8 @@ export const Footer: React.FC<Props> = ({ onOpenEditGuide }) => {
             © {currentYear} {personal.fullName}. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-1.5">
+          <div>
             <span>Built with care for Likhitha</span>
-            <span className="text-slate-600">•</span>
-            <button
-              onClick={onOpenEditGuide}
-              className="text-blue-400 hover:underline hover:text-blue-300"
-            >
-              Customization Guide
-            </button>
           </div>
         </div>
       </div>
